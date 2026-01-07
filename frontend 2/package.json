@@ -1,0 +1,55 @@
+{
+  "name": "@your-scope/pdf-template-engine",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A production-ready JSON-based PDF template engine for Node.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx test/test.ts",
+    "server": "tsx server.ts",
+    "server:dev": "tsx watch server.ts"
+  },
+  "keywords": [
+    "pdf",
+    "template",
+    "pdf-lib",
+    "pdf-generation",
+    "nodejs"
+  ],
+  "author": "Jyothiswarup E V",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16"
+  },
+  "dependencies": {
+    "pdf-lib": "^1.17.1",
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/express": "^4.17.21",
+    "@types/multer": "^1.4.11",
+    "@types/cors": "^2.8.17",
+    "tsup": "^8.0.1",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ]
+}
+
